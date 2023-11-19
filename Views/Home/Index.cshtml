@@ -1,0 +1,28 @@
+﻿@model IEnumerable<ArticleViewModel>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h3 class="display-4">LifeGuides</h1>
+    <div></div>
+</div>
+
+<div>
+    @{
+        foreach (var a in Model)
+        {
+
+            <div class="articles-element">
+                <a href="/Article/ArticleView?id=@a.articleId">
+                    <h3>@a.articleTitle</h3>
+                    <p>@a.articleDescription</p>
+                    <p>Автор: @a.articleAuthor</p>
+                </a>
+
+            </div>
+
+
+        }
+    }
+</div>

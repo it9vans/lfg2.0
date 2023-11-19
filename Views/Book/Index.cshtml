@@ -1,0 +1,21 @@
+@model IEnumerable<LifeGuides.Models.BookViewModel>
+@{
+    ViewData["Title"] = "Книги";
+}
+
+<div class="text-center">
+    <h3 class="display-4">Список книг</h1>
+</div>
+
+<div>
+    @{
+        foreach (var a in Model){
+            
+            <div class="articles-element">
+                <h3>@a.bookTitle</h3>
+                <p>@a.bookAuthor</p>
+                
+            </div>
+        }
+    }
+</div>

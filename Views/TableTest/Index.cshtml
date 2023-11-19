@@ -1,0 +1,32 @@
+@model IEnumerable<LifeGuides.Models.TableTest>
+@{
+    ViewData["Title"] = "Пример таблицы";
+}
+
+<div class="text-center">
+    <h5 class="display-4">Пример таблицы клиентов</h5>
+</div>
+
+<div >
+    <table class="table">
+        <tr>
+            <th>Id</th>
+            <th>ФИО</th>
+            <th>E-mail</th>
+            <th>Количество заказов</th>
+            <th>Дата регистрации</th>
+        </tr>
+        @{
+            foreach (var a in Model)
+            {
+                <tr>
+                    <td>@a.id</td>
+                    <td>@a.name</td>
+                    <td>@a.email</td>
+                    <td>@a.ordersCount</td>
+                    <td>@a.creationDate</td>
+                </tr>
+            }
+        }
+    </table>
+</div>

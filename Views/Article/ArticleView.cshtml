@@ -1,0 +1,12 @@
+@model Article
+@{
+    ViewData["Title"] = Model.title;
+}
+
+<div>
+    <h3>@Model.title</h3>
+    <p>@Model.description</p>
+    <p>@Model.text</p>
+
+    <p>@Model.authorId</p>
+</div>

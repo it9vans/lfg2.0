@@ -1,0 +1,25 @@
+@model Article
+@{
+    ViewData["Title"] = "Публикация статьи";
+}
+
+<div>
+    <form asp-action="ArticlePost" asp-controller="Article">
+        <p>
+            <label asp-for="title">Название статьи</label>
+            <input type="text" asp-for="title" />
+            <span asp-validation-for="title"/>
+        </p>
+        <p>
+            <label asp-for="description">Описание</label>
+            <input type="text" asp-for="description" />
+        </p>
+        <p>
+            <label asp-for="text">Текст статьи</label>
+            <input type="text" asp-for="text" />
+        </p>
+        <p>
+            <input type="submit" value="Опубликовать" />
+        </p>
+    </form>
+</div>
